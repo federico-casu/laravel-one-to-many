@@ -15,10 +15,12 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         $types = [
-            'Frontend',
-            'Backend',
+            'FrontEnd',
+            'BackEnd',
             'Vue3',
-            'Laravel10'
+            'Laravel10',
+            'Ui',
+            'FullStack'
         ];
 
         foreach ($types as $type) {
