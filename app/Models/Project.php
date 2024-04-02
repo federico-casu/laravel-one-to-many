@@ -16,7 +16,8 @@ class Project extends Model
         'cover_image',
         'repo_name',
         'repo_link',
-        'description'
+        'description',
+        'type_id'
     ];
 
     public static function generateRepoName($title) {

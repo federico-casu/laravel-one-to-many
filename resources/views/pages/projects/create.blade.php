@@ -35,6 +35,21 @@
             </div>
 
             <div class="mb-3">
+                <label for="type_id" class="form-label">Type</label>
+                <select
+                    class="form-select form-select-lg @error('type_id') is_invalid @enderror"
+                    name="type_id"
+                    id="type_id"
+                >
+                    <option selected value="">Select one</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }} {{ $type->id == old('type_id') ? 'selected' : '' }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            
+
+            <div class="mb-3">
                 <label for="repo_link" class="form-label">Repository link</label>
                 <input type="text" class="form-control" name="repo_link" id="repo_link" />
             </div>

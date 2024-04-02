@@ -26,7 +26,8 @@ class StoreProjectRequest extends FormRequest
             'cover_image' => ['nullable', 'image'],
             'repo_name' => ['unique:projects,repo_name'],
             'repo_link' => ['nullable'],
-            'description' => ['nullable']
+            'description' => ['nullable'],
+            'type_id' => ['nullable', 'exists:types,id']
         ];
     }
 }
