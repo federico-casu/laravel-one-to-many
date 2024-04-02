@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,8 @@ Route::middleware('auth')
     Route::resource('projects', ProjectController::class)->parameters([
         'projects' => 'project:repo_name'
     ]);
+
+    Route::resource('types', TypeController::class);
 
 });
 
